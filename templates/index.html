@@ -1,7 +1,24 @@
 {% extends "_base.html" %}
 
+{% block title %}Home{% endblock %}
+
 {% block content %}
-<h1 class="text-red-500 text-7xl text-center">
-    Hello Tailwind CSS
-</h1>
+<div class="box-content w-32 h-32 border-4 border-slate-500 p-4 text-center rounded">
+    Hello
+</div>
+
+<div class="box-border h-auto w-44 p-4 border-4 border-slate-500 mt-4">
+    When controlling the flow of text, using the CSS property
+    <span class="inline bg-slate-500 text-slate-50">display: inline</span>
+    will cause the text inside the element to wrap normally. While using the
+    property
+    <span class="inline-block bg-slate-500 text-slate-50"
+    >display: inline-block</span
+    >
+    will wrap the element to prevent the text inside from extending beyond its
+    parent. Lastly, using the property
+    <span class="block bg-slate-500 text-slate-50">display: block</span> will put
+    the element on its own line and fill its parent.
+</div>
 {% endblock content %}
+
