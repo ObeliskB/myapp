@@ -101,5 +101,40 @@
     rounded" onclick="document.getElementById('myImage').src='{% static 'images/Slide.png' %}'">แมวสไลด์</button>
 </div>
 
+<div class="mt-4">
+    <div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full mt-2 font-sarabun" 
+         onclick="DisplayTable('visible')">แสดงตาราง</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full mt-2 font-sarabun"
+         onclick="DisplayTable('hidden')">ซ่อนตาราง</button>
+    </div>
+    <table id="myTable" class="table-auto border-2 border-slate-900">
+        <caption>ตารางสินค้า</caption>
+        <tr class="border-2 border-slate-900">
+            <th class="border-2 border-slate-900 bg-blue-500 text-white">รายการที่ 1</th>
+            <th class="border-2 border-slate-900 bg-blue-500 text-white">รายการที่ 2</th>
+            <th class="border-2 border-slate-900 bg-blue-500 text-white">รายการที่ 3</th>
+        </tr>
+        <tr>
+            <td class="border-2 border-slate-900">324</td>
+            <td class="border-2 border-slate-900">657</td>
+            <td class="border-2 border-slate-900">318</td>
+        </tr>
+        <tr class="border-2 border-slate-900">
+            <td class="border-2 border-slate-900">999</td>
+            <td class="border-2 border-slate-900">777</td>
+            <td class="border-2 border-slate-900">888</td>
+        </tr>
+    </table>
+</div>
+
+<div class="mt-4">
+    number #1<input class="ml-2 border-2 border-slate-900" type="number" id="num1"><br />
+    number #2<input class="ml-2 border-2 border-slate-900" type="number" id="num2"><br />
+    number #3<input class="ml-2 border-2 border-slate-900" type="number" id="num3"><br />
+    <button class="ml-2 border-2 border-slate-900" onclick="calAverage()">Submit</button>
+</div>
+<div class="mt-2 text-2xl" id="result"></div>
+
 {% endblock content %}
 
