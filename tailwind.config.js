@@ -6,7 +6,9 @@ module.exports = {
     extend: {
       fontFamily: {
         angsana: ["Angsana New"],
-        athiti: ["Athiti"]
+        athiti: ["Athiti"],
+        kanit: ["Kanit"],
+        sarabun: ["Sarabun"],
       }
     },
   },
