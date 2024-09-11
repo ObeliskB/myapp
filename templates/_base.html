@@ -20,7 +20,30 @@
 	<link rel="stylesheet"
 		href="{% static 'src/output.css' %}">
 	{% endcompress %}
+	<script>
+		function ThaiDateTime(date) {
+            let monthNames = [
+                "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน",
+                "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม.",
+                "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+            ];
 
+            let year = date.getFullYear() + 543;
+            let month = monthNames[date.getMonth()];
+            let numOfDay = date.getDate();
+
+            let hours = date.getHours().toString().padStart(2, "0");
+            let minutes = date.getMinutes().toString().padStart(2, "0");
+            let seconds = date.getSeconds().toString().padStart(2, "0");
+
+            return `${numOfDay} ${month} ${year} ${hours}:${minutes}:${seconds} น.`;
+		}
+		setInterval(UpdateTime, 1000);
+		function UpdateTime() {
+			let now = ThaiDateTime(new Date());
+			document.getElementById('currentDateTime').innerHTML = now;
+		}
+	</script>
 </head>
 
 <body>
